@@ -1,0 +1,30 @@
+let handler = async (m, { conn, text, usedPrefix, command }) => {
+
+var chan = `❏––––––『 *SCRIPT* 』––––––❏
+jadi bot murmer Langsung Chat aja Ownernya
+wa.me/${nomorown}
+
+☕ Link YT :
+https://youtube.com/ichangaming
+🍜 Link SC :
+https://sociabuzz.com/ichanzx/b/bot-zx-v2-premium
+
+⌕ ❙❘❙❙❘❙❚❙❘❙❙❚❙❘❙❘❙❚❙❘❙❙❚❙❘❙❙❘❙❚❙❘ ⌕`
+let menu = [
+    '✅'
+    ]
+    conn.sendMessage(m.chat, {
+    react: {
+    text: `${menu}`,
+    key: m.key,
+    }})
+let thumb = 'https://telegra.ph/file/d98096acd41c76fa72a06.jpg'
+
+await m.reply(chan)
+}
+
+handler.help = ['sc']
+handler.tags = ['main']
+handler.command = /^(jadibot)$/i
+
+module.exports = handler
